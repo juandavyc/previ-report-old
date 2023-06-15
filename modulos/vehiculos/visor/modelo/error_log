@@ -1,0 +1,4 @@
+[08-Mar-2022 10:23:08 America/Bogota] PHP Notice:  Undefined index: Origin in /home/u508857687/domains/previreport.com/public_html/modulos/vehiculos/visor/modelo/buscador_de_vehiculos.php on line 30
+[08-Mar-2022 10:23:51 America/Bogota] PHP Notice:  Undefined index: Origin in /home/u508857687/domains/previreport.com/public_html/modulos/vehiculos/visor/modelo/buscador_de_vehiculos.php on line 30
+[08-Mar-2022 10:26:44 America/Bogota] PHP Notice:  Undefined index: Origin in /home/u508857687/domains/previreport.com/public_html/modulos/vehiculos/visor/modelo/buscador_de_vehiculos.php on line 30
+[09-Mar-2022 19:03:40 America/Bogota] PHP Warning:  Undefined array key "Origin" in /home/u508857687/domains/previreport.com/public_html/modulos/vehiculos/visor/modelo/buscador_de_vehiculos.php on line 30

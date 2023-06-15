@@ -1,0 +1,34 @@
+<form id="form_2_buscar_documento_siniestro" name="form_2_buscar_documento_siniestro" hidden>
+
+    <fieldset>
+        <legend><i class="fas fa-search"></i> Paso 2</legend>
+        <div class="row gtr-25 gtr-uniform">
+            <div class="col-8 col-12-small">
+                <label class="label-important">
+                    Documento Conductor <b class="list-key"></b></label>
+                <div class="input-container">
+                    <i class="fas fa-align-left icon-input"></i>
+                    <input type="text" id="form_2_documento_input" value="" placeholder="Documento del conductor"
+                        class="text-uppercase autocomplete" required="" />
+                    <input type="hidden" name="form_2_documento" id="form_2_documento_select" value="0" data-default="0"
+                        required="" />
+                    <input type="hidden" name="form_2_empresa" id="form_2_empresa" />
+                </div>
+            </div>
+            <div class="col-2 col-12-small">
+                <label> Verificar </label>
+                <button type="submit" id="btn_datos_conductor" class="primary small fit">
+                    Verificar Conductor
+                </button>
+            </div>
+            <div class="col-2 col-12-small">
+                <label> Cancelar </label>
+                <button id="form_2_limpiar_formulario" class="button primary small fit btn-limpiar-formulario">
+                    CANCELAR
+                </button>
+            </div>
+        </div>
+    </fieldset>
+
+</form>
+<div class="row gtr-50 gtr-uniform" id="agregar_resultados_body"></div>

@@ -1,0 +1,96 @@
+<fieldset>
+  <legend>
+     <i class="far fa-folder-open"></i> Historial de Revisión Preventiva
+  </legend>
+  <div id="form_5_revision_preventiva_resultados" class="accordion_form_resultados"></div>
+</fieldset>
+<form id="form_5_revision_preventiva" name="form_5_revision_preventiva">
+  <div class="row gtr-25 gtr-uniform">
+     <div class="col-12">
+        <fieldset>
+           <legend><i class="fas fa-plus"></i> Nueva Revisión Preventiva</legend>
+           <div class="row gtr-25 gtr-uniform">
+              <div class="col-3 col-12-small">
+                 <label class="label-important label-datos">
+                 Lugar Revision Preventiva <b class="list-key"></b></label>
+              </div>
+              <div class="col-9 col-12-small">
+                 <div class="input-container">
+                    <i class="fas fa-map-marked-alt icon-input"></i>
+                    <input type="text" id="form_5_nombre_preventiva_input" value="" placeholder="Lugar Revision Preventiva "
+                       class="text-uppercase" required="" />
+                    <input type="hidden" name="form_5_nombre_preventiva" id="form_5_nombre_preventiva_select" value="1"
+                       data-default="1" required="" />
+                 </div>
+              </div>
+              <div class="col-3 col-12-small">
+                 <label class="label-datos"> Numero de Revision Preventiva </label>
+              </div>
+              <div class="col-3 col-12-small">
+                 <div class="input-container">
+                    <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+                    <input type="number" name="form_5_numero_preventiva" id="form_5_numero_preventiva" placeholder="0000"
+                       autocomplete="off" value="" class="text-uppercase" />
+                 </div>
+              </div>
+              <div class="col-6 col-12-small"></div>
+              <div class="col-3 col-12-small">
+                 <label class="label-important label-datos">
+                 Fecha De Expedicion Preventiva
+                 </label>
+              </div>
+              <div class="col-3 col-12-small">
+                 <div class="input-container">
+                    <i class="fas fa-calendar icon-input"></i>
+                    <input type="text" name="form_5_fecha_expedicion_preventiva" id="form_5_fecha_expedicion_preventiva"
+                       class="input_date_listener" autocomplete="off" required="" />
+                 </div>
+              </div>
+              <div class="col-3 col-12-small">
+                 <label class="label-important label-datos">
+                 Fecha Vencimiento Preventiva
+                 </label>
+              </div>
+              <div class="col-3 col-12-small">
+                 <div class="input-container">
+                    <i class="fas fa-calendar icon-input"></i>
+                    <input type="text" name="form_5_fecha_vencimiento_preventiva" id="form_5_fecha_vencimiento_preventiva"
+                       class="input_date_listener" autocomplete="off" required="" />
+                 </div>
+              </div>
+              <div class="col-12">
+                 <label class="label-datos">
+                 <i class="fas fa-images"></i> Foto <b>( opcional )</b></label>
+              </div>
+              <div class="col-12">
+                 <div class="photo-control">
+                    <div class="photo-info">
+                       <label>Revision Preventiva </label>
+                       <input type="text" id="form_5_foto_revision_preventiva" name="form_5_foto_revision_preventiva"
+                          value="/images/sin_imagen.png" readonly required />
+                    </div>
+                    <div class="photo-buttons">
+                       <button class="button primary small btn-file-open" id="btn-form_5_foto_revision_preventiva"
+                          data-folder="revision_preventiva" input-id="form_5_foto_revision_preventiva"></button>
+                       <button class="button primary small btn-camera-open" id="btn-form_5_foto_revision_preventiva"
+                          data-folder="revision_preventiva" input-id="form_5_foto_revision_preventiva"></button>
+                       <button class="button primary small btn-camera-show" data-id="form_5_foto_revision_preventiva"></button>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </fieldset>
+     </div>
+     <div class="col-12">
+        <hr class="hr-text" data-content="Opciones del formulario" />
+     </div>
+     <div class="col-6 col-12-small">
+        <input type="submit" value="Guardar Revision Preventiva " class="primary small fit" />
+     </div>
+     <div class="col-6 col-12-small">
+        <button type="reset" class="button primary small fit btn-limpiar-formulario">
+        CANCELAR
+        </button>
+     </div>
+  </div>
+</form>

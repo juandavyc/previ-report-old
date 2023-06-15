@@ -1,0 +1,172 @@
+<form id="form_0_informacion_usuario" name="form_0_informacion_usuario">
+    <div class="row gtr-25 gtr-uniform">
+        <div class="col-12 align-center">
+            <i class="fas fa-info-circle fa-3x"></i>
+        </div>
+        <div class="col-12">
+            <fieldset>
+                <legend><i class="fas fa-plus"></i> Datos básicos</legend>
+                <div class="row gtr-25 gtr-uniform">
+                    <div class="col-4 col-12-mobilep"></div>
+                    <div class="col-4 col-12-mobilep align-center">
+                        <span class="image fit">
+                            <a href="/images/sin_imagen.png" class="foto-images-link" id="form_0_href_foto">
+                                <img src="/images/sin_imagen.png">
+                            </a>
+                        </span>
+                        <label>Foto Usuario</label>
+                    </div>
+                    <div class="col-4 col-12-mobilep"></div>
+                    <div class="col-12">
+                        <div class="photo-control">
+                            <div class="photo-info">
+                                <label>Foto Usuario</label>
+                                <input type="text" id="form_0_foto_usuario" name="form_0_foto_usuario"
+                                    value="/images/sin_imagen.png" readonly="" required="">
+                            </div>
+                            <div class="photo-buttons">
+                                <button class="button primary small btn-camera-open" id="btn-form_0_foto_usuario"
+                                    data-folder="conductores" input-id="form_0_foto_usuario"></button>
+                                <button class="button primary small btn-camera-show"
+                                    data-id="form_0_foto_usuario"></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2 col-12-small">
+                        <label class="label-datos"> Cedula </label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <label class="label-resultados" id="form_0_cedula"></label>
+                    </div>
+                    <div class="col-6 col-12-small"></div>
+                    <div class="col-2 col-12-small">
+                        <label class="label-important label-datos"> Nombre </label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-signature icon-input"></i>
+                            <input type="text" name="form_0_nombre" id="form_0_nombre" placeholder="Nombre del usuario"
+                                autocomplete="off" value="" class="text-uppercase" required="" />
+                        </div>
+                    </div>
+                    <div class="col-2 col-12-small">
+                        <label class="label-important label-datos"> Apellido </label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-signature icon-input"></i>
+                            <input type="text" name="form_0_apellido" id="form_0_apellido"
+                                placeholder="Apellido del usuario" autocomplete="off" value="" class="text-uppercase"
+                                required="" />
+                        </div>
+                    </div>
+                    <div class="col-2 col-12-small">
+                        <label class="label-important label-datos"> Telefono </label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-tty icon-input"></i>
+                            <input type="text" name="form_0_telefono" id="form_0_telefono" placeholder="Telefono"
+                                autocomplete="off" class="text-uppercase" required />
+                        </div>
+                    </div>
+                    <div class="col-2 col-12-small">
+                        <label class="label-important label-datos"> Correo</label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-at icon-input"></i>
+                            <input type="email" name="form_0_correo" id="form_0_correo" placeholder="correo@correo.com"
+                                autocomplete="off" class="text-uppercase" required />
+                        </div>
+                    </div>
+                    <div class="col-2 col-12-small">
+                        <label class="label-important label-datos">
+                            Fecha nacimiento
+                        </label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-calendar icon-input"></i>
+                            <input type="text" name="form_0_fecha_nacimiento" id="form_0_fecha_nacimiento"
+                                class="input_date_listener" autocomplete="off" value="01/01/2021" required="">
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-12">
+            <fieldset>
+                <legend><i class="fas fa-plus"></i> Rango</legend>
+                <div class="row gtr-25 gtr-uniform">
+                    <!-- <div class="col-2 col-12-small">
+                        <label class="label-important label-datos"> Empresa <b class="list-key"></b></label>
+                    </div>
+                    <div class="col-4 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-flag icon-input"></i>
+                            <input type="text" id="form_0_empresa_input" value="SIN EMPRESA"
+                                placeholder="Nombre de la empresa" class="text-uppercase" required="" />
+                            <input type="hidden" name="form_0_empresa" id="form_0_empresa_select" value="1"
+                                data-default="1" required="" />
+                        </div>
+                    </div> -->
+                    <div class="col-2 col-12-small">
+                        <label class="label-important label-datos"> Rango </b></label>
+                    </div>
+                    <div class="col-10 col-12-small">
+                        <div class="input-container">
+                            <i class="fas fa-list icon-input"></i>
+                            <select id="form_0_rango" name="form_0_rango" required>
+                                <optgroup label="(Clientes)">
+                                    <option value="5">CONDUCTOR</option>
+                                    <option value="6">MECANICO</option>
+                                </optgroup>
+                                <option value="7" selected>SIN RANGO</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12" id="container-taller" hidden>
+                        <div class="row gtr-25 gtr-uniform">
+                            <div class="col-2 col-12-small">
+                                <label class="label-important label-datos"> TALLER </b></label>
+                            </div>
+                            <div class="col-4 col-12-small">
+                                <div class="input-container">
+                                    <i class="fas fa-flag icon-input"></i>
+                                    <input type="text" id="form_0_taller_input" value="SIN TALLER"
+                                        placeholder="Nombre del Taller" class="text-uppercase" />
+                                    <input type="hidden" name="form_0_taller" id="form_0_taller_select" value="1"
+                                        data-default="1" required="" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-12">
+            <fieldset>
+                <legend><i class="fas fa-file-signature"></i> Firma Del Usuario</legend>
+                <div class="row gtr-50 gtr-uniform">
+                    <div class="col-3 col-12-small"></div>
+                    <div class="col-6 col-12-small">
+                        <div class="canvas-container" id="canvas_firma_usuario"></div>
+                    </div>
+                    <div class="col-3 col-12-small"></div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="col-12">
+            <hr class="hr-text" data-content="Opciones del formulario" />
+        </div>
+        <div class="col-6 col-12-small">
+            <input type="submit" value="Guardar Información" class="primary small fit" />
+        </div>
+        <div class="col-6 col-12-small">
+            <button type="reset" id="form_1_limpiar_formulario" class="button primary small fit btn-limpiar-formulario">
+                CANCELAR
+            </button>
+        </div>
+    </div>
+</form>

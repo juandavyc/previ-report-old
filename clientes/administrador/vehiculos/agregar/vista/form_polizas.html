@@ -1,0 +1,172 @@
+<fieldset>
+  <legend><i class="far fa-folder-open"></i> Historial de Pólizas</legend>
+  <div id="form_7_polizas_resultados" class="accordion_form_resultados"></div>
+</fieldset>
+<form id="form_7_polizas" name="form_7_polizas">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Nueva póliza</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Aseguradora <b class="list-key"></b
+            ></label>
+          </div>
+          <div class="col-9 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-shield-alt icon-input"></i>
+              <input
+                type="text"
+                id="form_7_aseguradora_input"
+                value=""
+                placeholder="Aseguradora"
+                class="text-uppercase"
+                required=""
+              />
+              <input
+                type="hidden"
+                name="form_7_aseguradora"
+                id="form_7_aseguradora_select"
+                value="1"
+                data-default="1"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Tipo de póliza <b class="list-key"></b
+            ></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-filter icon-input"></i>
+              <input
+                type="text"
+                id="form_7_tipo_poliza_input"
+                value=""
+                placeholder="Tipo de póliza"
+                class="text-uppercase"
+                required=""
+              />
+              <input
+                type="hidden"
+                name="form_7_tipo_poliza"
+                id="form_7_tipo_poliza_select"
+                value="1"
+                data-default="1"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Numero de póliza
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+              <input
+                type="number"
+                name="form_7_numero_poliza"
+                id="form_7_numero_poliza"
+                placeholder="Numero de póliza"
+                autocomplete="off"
+                value=""
+                class="text-uppercase"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha De Expedicion
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input
+                type="text"
+                name="form_7_fecha_expedicion"
+                id="form_7_fecha_expedicion"
+                class="input_date_listener"
+                autocomplete="off"
+                value="01/01/2021"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha De Vencimiento
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input
+                type="text"
+                name="form_7_fecha_vencimiento"
+                id="form_7_fecha_vencimiento"
+                class="input_date_listener"
+                autocomplete="off"
+                value="01/01/2021"
+                required=""
+              />
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="label-datos">
+              <i class="fas fa-images"></i> Foto <b>( opcional )</b></label
+            >
+          </div>
+          <div class="col-12">
+            <div class="photo-control">
+              <div class="photo-info">
+                <label> Póliza </label>
+                <input
+                  type="text"
+                  id="form_7_foto_poliza"
+                  name="form_7_foto_poliza"
+                  value="/images/sin_imagen.png"
+                  readonly
+                  required
+                />
+              </div>
+              <div class="photo-buttons">
+                <button
+                  class="button primary small btn-camera-open"
+                  id="btn-form_7_foto_poliza"
+                  data-folder="polizas"
+                  input-id="form_7_foto_poliza"
+                ></button>
+                <button
+                  class="button primary small btn-camera-show"
+                  data-id="form_7_foto_poliza"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text" data-content="Fin del Formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input type="submit" value="guardar póliza" class="primary small fit" />
+    </div>
+    <div class="col-6 col-12-small">
+      <button
+        type="reset"
+        class="button primary small fit btn-limpiar-formulario"
+      >
+        CANCELAR
+      </button>
+    </div>
+  </div>
+</form>

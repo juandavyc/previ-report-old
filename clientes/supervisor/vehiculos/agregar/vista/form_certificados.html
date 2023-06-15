@@ -1,0 +1,179 @@
+<fieldset>
+  <legend><i class="far fa-folder-open"></i> Historial de Certificados</legend>
+  <div
+    id="form_8_certificados_resultados"
+    class="accordion_form_resultados"
+  ></div>
+</fieldset>
+<form id="form_8_certificados" name="form_8_certificados">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Nuevo certificado</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Entidad certificadora <b class="list-key"></b
+            ></label>
+          </div>
+          <div class="col-9 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-shield-alt icon-input"></i>
+              <input
+                type="text"
+                id="form_8_entidad_certificado_input"
+                value=""
+                placeholder="Entidad certificadora"
+                class="text-uppercase"
+                required=""
+              />
+              <input
+                type="hidden"
+                name="form_8_entidad_certificado"
+                id="form_8_entidad_certificado_select"
+                value="1"
+                data-default="1"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Tipo de certificado <b class="list-key"></b
+            ></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-filter icon-input"></i>
+              <input
+                type="text"
+                id="form_8_tipo_certificado_input"
+                value=""
+                placeholder="Tipo de certificado"
+                class="text-uppercase"
+                required=""
+              />
+              <input
+                type="hidden"
+                name="form_8_tipo_certificado"
+                id="form_8_tipo_certificado_select"
+                value="1"
+                data-default="1"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Numero de Certificado
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+              <input
+                type="number"
+                name="form_8_numero_certificado"
+                id="form_8_numero_certificado"
+                placeholder="Numero de certificado"
+                autocomplete="off"
+                value=""
+                class="text-uppercase"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha De Expedicion
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input
+                type="text"
+                name="form_8_fecha_expedicion"
+                id="form_8_fecha_expedicion"
+                class="input_date_listener"
+                autocomplete="off"
+                value="01/01/2021"
+                required=""
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha De Vencimiento
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input
+                type="text"
+                name="form_8_fecha_vencimiento"
+                id="form_8_fecha_vencimiento"
+                class="input_date_listener"
+                autocomplete="off"
+                value="01/01/2021"
+                required=""
+              />
+            </div>
+          </div>
+
+          <div class="col-12">
+            <label class="label-datos">
+              <i class="fas fa-images"></i> Foto <b>( opcional )</b></label
+            >
+          </div>
+          <div class="col-12">
+            <div class="photo-control">
+              <div class="photo-info">
+                <label> Certificado </label>
+                <input
+                  type="text"
+                  id="form_8_foto_certificado"
+                  name="form_8_foto_certificado"
+                  value="/images/sin_imagen.png"
+                  readonly
+                  required
+                />
+              </div>
+              <div class="photo-buttons">
+                <button
+                  class="button primary small btn-camera-open"
+                  id="btn-form_8_foto_certificado"
+                  data-folder="vehiculo/certificados"
+                  input-id="form_8_foto_certificado"
+                ></button>
+                <button
+                  class="button primary small btn-camera-show"
+                  data-id="form_8_foto_certificado"
+                ></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text" data-content="Fin del Formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input
+        type="submit"
+        value="guardar certificado"
+        class="primary small fit"
+      />
+    </div>
+    <div class="col-6 col-12-small">
+      <button
+        type="reset"
+        class="button primary small fit btn-limpiar-formulario"
+      >
+        CANCELAR
+      </button>
+    </div>
+  </div>
+</form>

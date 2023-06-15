@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px" height="50px" viewBox="0 0 50 50" zoomAndPan="disable">
+    <style type="text/css"><![CDATA[
+		line
+		{
+			stroke:#00000052;
+			stroke-width: 1px;
+		}
+    ]]></style>
+
+	<line x1="35" y1="50" x2="50" y2="35" />
+	<line x1="30" y1="50" x2="50" y2="30" />
+	<line x1="25" y1="50" x2="50" y2="25" />
+	<!-- spider
+	<line x1="20" y1="50" x2="50" y2="20" />
+	<line x1="0" y1="50" x2="50" y2="40" />
+	<line x1="10" y1="50" x2="50" y2="30" />	
+	<line x1="30" y1="50" x2="50" y2="10" />
+	<line x1="40" y1="50" x2="50" y2="0" />
+	-->
+</svg>

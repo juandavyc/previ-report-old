@@ -1,0 +1,52 @@
+<form id="from_1_buscar_cedula" name="from_1_buscar_cedula">
+  <div class="row gtr-50 gtr-uniform">
+    <div class="col-6 col-12-small"></div>
+    <div class="col-6 col-12-small">
+      <aside class="note-wrap note-yellow">
+        Escriba la <b>CEDULA</b>, en caso de que no exista se crea, de lo
+        contrario solo se puede editar los datos. <br /><b> P.D. </b>Solo
+        soporte técnico puede <b>ELIMINAR USUARIOS</b>
+      </aside>
+    </div>
+
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-search"></i> Buscar Usuario</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-2 col-12-small">
+            <label class="label-important label-datos"> Cedula </label>
+          </div>
+          <div class="col-7 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-align-left icon-input"></i>
+              <input
+                type="text"
+                id="form_1_cedula"
+                placeholder="0000000"
+                name="form_1_cedula"
+                class="text-uppercase"
+                value=""
+                required=""
+                autocomplete="off"
+              />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <input
+              type="submit"
+              value="BUSCAR CEDULA"
+              class="primary small fit"
+            />
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</form>
+<br />
+<div
+  id="agregar_resultados_title"
+  class="div-resultado-title align-center"
+  hidden
+></div>
+<div id="agregar_resultados_body"></div>

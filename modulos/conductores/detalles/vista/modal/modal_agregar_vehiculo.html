@@ -1,0 +1,40 @@
+<div id="modal_agregar_vehiculo" hidden>
+    <form id="form_agregar_vehiculo" name="form_agregar_vehiculo">
+        <div class="row">
+            <div class="col-12 align-center">
+                <i class="fas fa-industry fa-3x"></i>
+                <h3>Agregar vehiculo</h3>
+            </div>
+
+            <div class="col-3 col-12-small">
+                <label class="label-important label-datos"> Placa </label>
+            </div>
+            <div class="col-9 col-12-small">
+                <div class="input-container">
+                    <i class="fas fa-signature icon-input"></i>
+                    <input type="text" name="placa_vehiculo" placeholder="Placa del vehiculo" autocomplete="off" class="text-uppercase" required="" />
+                </div>
+            </div>
+            <div class="col-3 col-12-small">
+                <label class="label-datos"> Tipo de servicio</label>
+              </div>
+              <div class="col-9 col-12-small">
+                <div class="input-container">
+                  <i class="far fa-credit-card icon-input"></i>
+                  <select
+                    id="servicio_vehiculo"
+                    name="servicio_vehiculo"
+                    required
+                  >
+                    <option value="4">DIPLOMATICO</option>
+                    <option value="5">ENSEÑANZA</option>
+                    <option value="7">ESPECIAL</option>
+                    <option value="1">OFICIAL</option>
+                    <option value="3">PARTICULAR</option>
+                    <option value="2">PUBLICO</option>
+                  </select>
+                </div>
+              </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,45 @@
+<form id="form_2_estado_empresa" name="form_2_estado_empresa">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12 align-center">
+      <h2 id="form_2_estado_div"></h2>
+    </div>
+    <div class="col-12">
+      <ul>
+        <li><b>ACTIVO</b> : Deja ingresar a la plataforma</li>
+        <li><b>SUSPENDIDO</b> : No deja ingresar a la plataforma</li>
+      </ul>
+      <ol>
+        <li>
+          SI el estado de la empresa es <b>SUSPENDIDO</b>, todos los usuarios de
+          esta estarán en ese estado <b>SUSPENDIDO</b>.
+        </li>
+        <li>
+          SI el estado de la empresa es <b>ACTIVO</b>, todos los usuarios de
+          esta estarán en ese estado <b>ACTIVO</b>.
+        </li>
+      </ol>
+      <h4 style="font-weight: bold; color: red">
+        No use está función a la ligera.
+      </h4>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text-alt" data-content="Asignar nuevo estado" />
+    </div>
+    <div class="col-3 col-12-small">
+      <label class="label-datos label-important"> Estado </label>
+    </div>
+
+    <div class="col-5 col-12-small">
+      <div class="input-container">
+        <i class="fas fa-list icon-input"></i>
+        <select id="form_2_estado" name="form_2_estado" required>
+          <option value="1">ACTIVO</option>
+          <option value="2">SUSPENDIDO</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-4 col-12-small">
+      <input type="submit" value="Guardar estado" class="primary small fit" />
+    </div>
+  </div>
+</form>

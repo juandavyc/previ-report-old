@@ -1,0 +1,400 @@
+<form id="form_1_informacion_basica" name="form_1_informacion_basica">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12 align-center">
+      <i class="fas fa-info-circle fa-3x"></i>
+    </div>
+    <!-- inicio informacion basica -->
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-info-circle"></i> Información Básica</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              PLACA DEL VEHÍCULO
+            </label>
+          </div>
+          <div class="col-9 col-12-small">
+            <label class="label-resultados" id="form_1_placa">AAABBB</label>
+          </div>
+
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">Nro. de licencia de tránsito
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_licencia_transito" id="form_1_licencia_transito" placeholder="0000000"
+                autocomplete="off" required="" class="text-uppercase" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Estado del vehículo</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-car icon-input"></i>
+              <select id="form_1_estado_del_vehiculo" name="form_1_estado_del_vehiculo" required="">
+                <option value="1" selected>ACTIVO</option>
+                <option value="2">INACTIVO</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Tipo de servicio</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="far fa-credit-card icon-input"></i>
+              <select id="form_1_servicio_vehiculo" name="form_1_servicio_vehiculo" required>
+                <option value="4">DIPLOMATICO</option>
+                <option value="5">ENSEÑANZA</option>
+                <option value="7">ESPECIAL</option>
+                <option value="1">OFICIAL</option>
+                <option value="3">PARTICULAR</option>
+                <option value="2">PUBLICO</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Clase de vehículo <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-list icon-input"></i>
+              <input type="text" id="form_1_clase_vehiculo_input" value="SIN_CLASE" placeholder="Nombre de la clase"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_1_clase_vehiculo" id="form_1_clase_vehiculo_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Empresa <b class="list-key"></b></label>
+          </div>
+          <div class="col-9 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-industry icon-input"></i>
+              <input type="text" a id="form_1_empresa_input" value="SIN EMPRESA" placeholder="Empresa"
+                class="text-uppercase autocomplete ui-autocomplete-input" required="" />
+              <input type="hidden" name="form_1_empresa" id="form_1_empresa_select" value="1" data-default="1"
+                required="" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <!-- fin informacion basica -->
+    <!-- inicio Información general del vehículo -->
+    <div class="col-12">
+      <fieldset>
+        <legend>
+          <i class="fas fa-car"></i> Información General del Vehículo
+        </legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Marca <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-list icon-input"></i>
+              <input type="text" id="form_1_marca_vehiculo_input" value="SIN_MARCA" placeholder="Nombre de la marca"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_1_marca_vehiculo" id="form_1_marca_vehiculo_select" value="0"
+                data-default="0" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Linea <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-list icon-input"></i>
+              <input type="text" id="form_1_linea_vehiculo_input" value="SIN LINEA" placeholder="Nombre de la linea"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_1_linea_vehiculo" id="form_1_linea_vehiculo_select" value="0"
+                required="" />
+            </div>
+          </div>
+
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Modelo </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="far fa-calendar-alt icon-input"></i>
+              <input type="number" name="form_1_modelo_vehiculo" id="form_1_modelo_vehiculo" placeholder="0000"
+                autocomplete="off" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Color <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-palette icon-input"></i>
+              <input type="text" id="form_1_color_vehiculo_input" value="SIN_COLOR" placeholder="Nombre del color"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_1_color_vehiculo" id="form_1_color_vehiculo_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Número de serie </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_serie_vehiculo" id="form_1_serie_vehiculo" placeholder="Número de serie"
+                autocomplete="off" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Número de motor </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_motor_vehiculo" id="form_1_motor_vehiculo" placeholder="Número de motor"
+                autocomplete="off" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Número de VIN </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_vin_vehiculo" id="form_1_vin_vehiculo" placeholder="Número de vin"
+                autocomplete="off" class="text-uppercase" required="" />
+            </div>
+          </div>
+
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Tipo de carrocería <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-car-side icon-input"></i>
+              <input type="text" id="form_1_carroceria_vehiculo_input" value="SIN_CARROCERIA"
+                placeholder="Tipo de carroceria" class="text-uppercase" required="" />
+              <input type="hidden" name="form_1_carroceria_vehiculo" id="form_1_carroceria_vehiculo_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Cilindraje </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="far fa-calendar-alt icon-input"></i>
+              <input type="text" name="form_1_cilindraje_vehiculo" id="form_1_cilindraje_vehiculo" placeholder="0000"
+                autocomplete="off" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos"> Tipo Combustible</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-gas-pump icon-input"></i>
+              <select id="form_1_combustible_vehiculo" name="form_1_combustible_vehiculo" required="">
+                <option value="8">BIODIESEL</option>
+                <option value="3">DIESEL</option>
+                <option value="11">DIESEL-ELECTRICO</option>
+                <option value="5">ELECTRICO</option>
+                <option value="7">ETANOL</option>
+                <option value="4">GAS GASOLINA</option>
+                <option value="2">GAS NATURAL VEHICULAR</option>
+                <option value="1" selected>GASOLINA</option>
+                <option value="10">GASOLINA-ELECTRICO</option>
+                <option value="9">GLP</option>
+                <option value="6">HIDROGENO</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha de Matricula <b> (dd/mm/aaaa) </b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input type="text" name="form_1_fecha_matricula" id="form_1_fecha_matricula" class="input_date_listener"
+                autocomplete="off" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Autoridad de tránsito <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-user-tie icon-input"></i>
+              <input type="text" id="form_1_autoridad_de_transito_input" value="SIN_AUTORIDAD_DE_TRANSITO"
+                placeholder="Autoridad de tránsito" class="text-uppercase" required="" />
+              <input type="hidden" name="form_1_autoridad_de_transito" id="form_1_autoridad_de_transito_select"
+                value="1" data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Gravámenes a la propiedad </label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_gravamenes_a_la_propiedad_si" name="form_1_gravamenes_a_la_propiedad"
+              value="1" />
+            <label for="form_1_gravamenes_a_la_propiedad_si">Si</label>
+            <input type="radio" id="form_1_gravamenes_a_la_propiedad_no" name="form_1_gravamenes_a_la_propiedad"
+              value="2" checked />
+            <label for="form_1_gravamenes_a_la_propiedad_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Clásico o Antiguo</label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_clasico_o_antiguo_si" name="form_1_clasico_o_antiguo" value="1" />
+            <label for="form_1_clasico_o_antiguo_si">Si</label>
+            <input type="radio" id="form_1_clasico_o_antiguo_no" name="form_1_clasico_o_antiguo" value="2" checked />
+            <label for="form_1_clasico_o_antiguo_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Repotenciado</label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_repotenciado_si" name="form_1_repotenciado" value="1" />
+            <label for="form_1_repotenciado_si">Si</label>
+            <input type="radio" id="form_1_repotenciado_no" name="form_1_repotenciado" value="2" checked />
+            <label for="form_1_repotenciado_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Vehículo de Enseñanza
+            </label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_vehiculo_ensenianza_si" name="form_1_vehiculo_ensenianza" value="1" />
+            <label for="form_1_vehiculo_ensenianza_si">Si</label>
+            <input type="radio" id="form_1_vehiculo_ensenianza_no" name="form_1_vehiculo_ensenianza" value="2"
+              checked />
+
+            <label for="form_1_vehiculo_ensenianza_no">No</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <!-- fin Información general del vehículo -->
+    <!-- inicio regrabacion -->
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-recycle"></i> Regrabacion</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Regrabación motor </label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_regrabacion_motor_si" name="form_1_regrabacion_motor"
+              data-input="form_1_numero_regrabacion_motor" value="1" />
+            <label for="form_1_regrabacion_motor_si">Si</label>
+            <input type="radio" id="form_1_regrabacion_motor_no" name="form_1_regrabacion_motor"
+              data-input="form_1_numero_regrabacion_motor" value="2" checked />
+            <label for="form_1_regrabacion_motor_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Nro. regrabación motor </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_numero_regrabacion_motor" id="form_1_numero_regrabacion_motor"
+                placeholder="Nro. regrabación motor" autocomplete="off" value="NO" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Regrabación chasis </label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_regrabacion_chasis_si" name="form_1_regrabacion_chasis"
+              data-input="form_1_numero_regrabacion_chasis" value="1" />
+            <label for="form_1_regrabacion_chasis_si">Si</label>
+            <input type="radio" id="form_1_regrabacion_chasis_no" name="form_1_regrabacion_chasis"
+              data-input="form_1_numero_regrabacion_chasis" value="2" checked />
+            <label for="form_1_regrabacion_chasis_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Nro. regrabación chasis </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_numero_regrabacion_chasis" id="form_1_numero_regrabacion_chasis"
+                placeholder="Nro. regrabación chasis" autocomplete="off" value="NO" class="text-uppercase"
+                required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Regrabación serie </label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_regrabacion_serie_si" name="form_1_regrabacion_serie"
+              data-input="form_1_numero_regrabacion_serie" value="1" />
+            <label for="form_1_regrabacion_serie_si">Si</label>
+            <input type="radio" id="form_1_regrabacion_serie_no" name="form_1_regrabacion_serie"
+              data-input="form_1_numero_regrabacion_serie" value="2" checked />
+            <label for="form_1_regrabacion_serie_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Nro. regrabación serie </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_numero_regrabacion_serie" id="form_1_numero_regrabacion_serie"
+                placeholder="Nro. regrabación serie" autocomplete="off" value="NO" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Regrabación VIN </label>
+          </div>
+          <div class="col-3 col-12-small align-center">
+            <input type="radio" id="form_1_regrabacion_vin_si" name="form_1_regrabacion_vin"
+              data-input="form_1_numero_regrabacion_vin" value="1" />
+            <label for="form_1_regrabacion_vin_si">Si</label>
+            <input type="radio" id="form_1_regrabacion_vin_no" name="form_1_regrabacion_vin"
+              data-input="form_1_numero_regrabacion_vin" value="2" checked />
+            <label for="form_1_regrabacion_vin_no">No</label>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Nro. regrabación VIN </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-barcode icon-input"></i>
+              <input type="text" name="form_1_numero_regrabacion_vin" id="form_1_numero_regrabacion_vin"
+                placeholder="Nro. regrabación vin" autocomplete="off" value="NO" class="text-uppercase" required="" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text" data-content="Opciones del formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input type="submit" value="Guardar Información" class="primary small fit" />
+    </div>
+    <div class="col-6 col-12-small">
+      <button type="reset" class="button primary small fit btn-limpiar-formulario" disabled>
+        CANCELAR
+      </button>
+    </div>
+    <!-- fin regrabacion -->
+  </div>
+</form>

@@ -1,0 +1,53 @@
+<form id="from_1_buscar_nit" name="from_1_buscar_nit">
+  <div class="row gtr-50 gtr-uniform">
+    <div class="col-6 col-12-small"></div>
+    <div class="col-6 col-12-small">
+      <aside class="note-wrap note-yellow">
+        Escriba el <b>NIT</b>, en caso de que no exista se crea, de lo contrario
+        solo se puede editar los datos. <br /><b> P.D. </b>Solo soporte técnico
+        puede <b>ELIMINAR TALLERES</b>
+      </aside>
+    </div>
+
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-search"></i> Buscar taller</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-2 col-12-small">
+            <label class="label-important label-datos"> NIT </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-align-left icon-input"></i>
+              <input type="text" id="form_1_nit" placeholder="0000000-0" name="form_1_nit" class="text-uppercase"
+                value="" required="" autocomplete="off" />
+            </div>
+          </div>
+          <div class="col-2 col-12-small">
+            <label class="label-important label-datos"> Empresa <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+
+            <div class="input-container">
+              <i class="fas fa-industry icon-input"></i>
+              <input type="text" id="form_1_empresa_taller_input" value="" placeholder="Empresa"
+                class="text-uppercase autocomplete ui-autocomplete-input" required="">
+              <input type="hidden" name="form_1_empresa_taller" id="form_1_empresa_taller_select" value="1"
+                data-default="1" required="">
+            </div>
+
+
+
+            <!--   -->
+          </div>
+          <div class="col-2 col-12-small">
+            <input type="submit" value="BUSCAR NIT" class="primary small fit" />
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+</form>
+<br />
+<div id="agregar_resultados_title" class="div-resultado-title align-center" hidden></div>
+<div id="agregar_resultados_body"></div>

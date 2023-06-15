@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+
+AddDefaultCharset utf-8
+# folders
+# Options -Indexes
+Options All -Indexes
+Options -MultiViews
+
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteRule ^ index.php [QSA,L]

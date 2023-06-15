@@ -1,0 +1,41 @@
+Este ejemplo sirve para interactuar entre imports,
+asignandoles una clase.
+
+/* ejmplo: accordion.js */
+let sclass = null;
+let tclass = null;
+export default class one_class {
+  constructor(_class) {
+    // clase1 = new _class();
+    tclass = this;
+    sclass = _class;
+    sclass.xx();
+  }
+
+  axion() {
+    console.log('xx');
+  }
+}
+/* ejemplo: form_informacion_del_vehiculo */
+export default class two_class {
+  constructor(_name) {
+    this.ini();
+  }
+  xx() {
+    console.log('xx_info');
+  }
+  ini() {
+    console.log('ini_info');
+  }
+}
+
+/* ejemplo main.js */
+
+
+import infomarcion_vehiculo_js from './form_informacion_del_vehiculo.js';
+let aa = new infomarcion_vehiculo_js('juan_info');
+
+import accordion_js from './accordion.js';
+let bb = new accordion_js(aa);
+
+

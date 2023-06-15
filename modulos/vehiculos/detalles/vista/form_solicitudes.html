@@ -1,0 +1,110 @@
+<fieldset>
+  <legend><i class="far fa-folder-open"></i> Historial de Solicitudes</legend>
+  <div id="form_9_solicitudes_resultados" class="accordion_form_resultados"></div>
+</fieldset>
+<form id="form_9_solicitudes" name="form_9_solicitudes">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Nueva solicitud</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Entidad de Transito <b class="list-key"></b></label>
+          </div>
+          <div class="col-9 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-shield-alt icon-input"></i>
+              <input type="text" id="form_9_entidad_transito_input" value="" placeholder="Entidad Transito"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_9_entidad_transito" id="form_9_entidad_transito_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Tipo de Solicitud <b class="list-key"></b></label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-filter icon-input"></i>
+              <input type="text" id="form_9_tipo_solicitud_input" value="" placeholder="Tipo de Solicitud"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_9_tipo_solicitud" id="form_9_tipo_solicitud_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Numero de Solicitud </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+              <input type="text" name="form_9_numero_solicitud" id="form_9_numero_solicitud"
+                placeholder="Numero de Solicitud" autocomplete="off" value="" class="text-uppercase" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha De Solicitud
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input type="text" name="form_9_fecha_solicitud" id="form_9_fecha_solicitud" class="input_date_listener"
+                autocomplete="off" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Estado de solicitud
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <select id="form_9_estado_solicitud" name="form_9_estado_solicitud" required>
+                <option value="1">SIN ESTADO</option>
+                <option value="2">APROBADA</option>
+                <option value="3">RECHAZADA</option>
+                <option value="4">EN TRAMITE</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="label-datos">
+              <i class="fas fa-images"></i> Foto <b>( opcional )</b></label>
+          </div>
+          <div class="col-12">
+            <div class="photo-control">
+              <div class="photo-info">
+                <label> Solicitud </label>
+                <input type="text" id="form_9_foto_solicitud" name="form_9_foto_solicitud"
+                  value="/images/sin_imagen.png" readonly required />
+              </div>
+              <div class="photo-buttons">
+                <button class="button primary small btn-file-open" id="btn-form_9_foto_solicitud"
+                  data-folder="vehiculo/solicitud" input-id="form_9_foto_solicitud"></button>
+                <button class="button primary small btn-camera-open" id="btn-form_9_foto_solicitud"
+                  data-folder="vehiculo/solicitud" input-id="form_9_foto_solicitud"></button>
+                <button class="button primary small btn-camera-show" data-id="form_9_foto_solicitud"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text" data-content="Fin del Formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input type="submit" value="guardar Solicitud" class="primary small fit" />
+    </div>
+    <div class="col-6 col-12-small">
+      <button type="reset" class="button primary small fit btn-limpiar-formulario">
+        CANCELAR
+      </button>
+    </div>
+  </div>
+</form>

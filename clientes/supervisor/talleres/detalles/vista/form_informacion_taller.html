@@ -1,0 +1,107 @@
+<form id="form_0_informacion_taller" name="form_0_informacion_taller">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12 align-center">
+      <i class="fas fa-info-circle fa-3x"></i>
+    </div>
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Datos básicos</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-2 col-12-small">
+            <label class="label-important label-datos"> Nit </label>
+          </div>
+          <div class="col-4 col-12-small">
+            <label class="label-resultados" id="form_0_nit"></label>
+          </div>
+          <div class="col-6 col-12-small"></div>
+          <div class="col-2 col-12-small">
+            <label class="label-important label-datos"> Nombre </label>
+          </div>
+          <div class="col-10 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-signature icon-input"></i>
+              <input type="text" name="form_0_nombre" id="form_0_nombre" placeholder="Nombre de la taller"
+                autocomplete="off" value="" class="text-uppercase" required="" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Datos de Contacto</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-2 col-12-small">
+            <label class="label-important label-datos"> Telefono </label>
+          </div>
+          <div class="col-4 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-tty icon-input"></i>
+              <input type="text" name="form_0_telefono" id="form_0_telefono" placeholder="Telefono" autocomplete="off"
+                class="text-uppercase" />
+            </div>
+          </div>
+          <div class="col-2 col-12-small">
+            <label class="label-datos"> Direccion</label>
+          </div>
+          <div class="col-4 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-map-marked-alt icon-input"></i>
+              <input type="text" name="form_0_direccion" id="form_0_direccion" placeholder="Direccion"
+                autocomplete="off" class="text-uppercase" />
+            </div>
+          </div>
+          <div class="col-2 col-12-small">
+            <label class="label-datos"> Correo</label>
+          </div>
+          <div class="col-4 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-at icon-input"></i>
+              <input type="email" name="form_0_correo" id="form_0_correo" placeholder="correo@correo.com"
+                autocomplete="off" class="text-uppercase" />
+            </div>
+          </div>
+          <div class="col-12">
+            <hr />
+          </div>
+          <div class="col-2 col-12-small">
+            <label class="label-datos">
+              Departamento <b class="list-key"></b></label>
+          </div>
+          <div class="col-4 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-flag icon-input"></i>
+              <input type="text" id="form_0_departamento_input" value="SIN DEPARTAMENTO"
+                placeholder="Nombre del departamento" class="text-uppercase" required="" />
+              <input type="hidden" id="form_0_departamento_select" value="1" data-default="1" required="" />
+            </div>
+          </div>
+
+          <div class="col-2 col-12-small">
+            <label class="label-datos"> Ciudad <b class="list-key"></b></label>
+          </div>
+          <div class="col-4 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-city icon-input"></i>
+              <input type="text" id="form_0_ciudad_input" value="SIN CIUDAD"
+                class="text-uppercase ui-autocomplete-input" required="" autocomplete="off" />
+              <input type="hidden" name="form_0_ciudad" id="form_0_ciudad_select" value="1" data-default="1"
+                required="" />
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text" data-content="Opciones del formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input type="submit" value="Guardar Información" class="primary small fit" />
+    </div>
+    <div class="col-6 col-12-small">
+      <button type="reset" id="form_1_limpiar_formulario" class="button primary small fit btn-limpiar-formulario">
+        CANCELAR
+      </button>
+    </div>
+  </div>
+</form>

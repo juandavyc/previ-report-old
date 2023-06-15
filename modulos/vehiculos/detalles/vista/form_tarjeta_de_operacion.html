@@ -1,0 +1,169 @@
+<fieldset>
+  <legend>
+    <i class="far fa-folder-open"></i> Historial de Tarjeta de Operación
+  </legend>
+  <div id="form_6_tarjeta_de_operacion_resultados" class="accordion_form_resultados"></div>
+</fieldset>
+<form id="form_6_tarjeta_de_operacion" name="form_6_tarjeta_de_operacion">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Nueva Tarjeta de Operación</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Empresa Afiliadora <b class="list-key"></b></label>
+          </div>
+          <div class="col-6 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-industry icon-input"></i>
+              <input type="text" id="form_6_nombre_empresa_afiliadora_input" value="" placeholder="Empresa Afiliadora "
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_6_nombre_empresa_afiliadora" id="form_6_nombre_empresa_afiliadora_select"
+                value="1" data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <button class="button primary small fit btn-crear-empresa">
+              Agregar empresa
+            </button>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Modalidad de Transporte <b class="list-key"></b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-shuttle-van icon-input"></i>
+              <input type="text" id="form_6_modalidad_transporte_input" value="" placeholder="Modalidad de Transporte"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_6_modalidad_transporte" id="form_6_modalidad_transporte_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Modalidad Servicio <b class="list-key"></b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-concierge-bell icon-input"></i>
+              <input type="text" id="form_6_modalidad_servicio_input" value="" placeholder="Modalidad de Servicio"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_6_modalidad_servicio" id="form_6_modalidad_servicio_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Radio De Accion <b class="list-key"></b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-broadcast-tower icon-input"></i>
+              <input type="text" id="form_6_radio_de_accion_input" value="" placeholder="Radio De Accion"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_6_radio_de_accion" id="form_6_radio_de_accion_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Numero Tarjeta Operacion </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+              <input type="text" name="form_6_numero_tarjeta_operacion" id="form_6_numero_tarjeta_operacion"
+                placeholder="Numero Tarjeta Operacion" value="" class="text-uppercase" autocomplete="off" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha Expedicion <b>(dd/mm/aaaa)</b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input type="text" name="form_6_fecha_expedicion" id="form_6_fecha_expedicion" class="input_date_listener"
+                autocomplete="off" required="" />
+            </div>
+          </div>
+
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha Vencimiento <b>(dd/mm/aaaa)</b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input type="text" name="form_6_fecha_vencimiento" id="form_6_fecha_vencimiento"
+                class="input_date_listener" autocomplete="off" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Estado Tarjeta Operacion </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-thumbs-up icon-input"></i>
+              <select id="form_6_estado_tarjeta_operacion" name="form_6_estado_tarjeta_operacion" required>
+                <option value="1" selected>VIGENTE</option>
+                <option value="2">NO VIGENTE</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-datos"> Numero vehiculo interno </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+              <input type="text" name="form_6_numero_interno_tarjeta_operacion"
+                id="form_6_numero_interno_tarjeta_operacion" placeholder="Numero Vehículo" value="" autocomplete="off"
+                class="text-uppercase" />
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="label-datos">
+              <i class="fas fa-images"></i> Foto <b>( opcional )</b></label>
+          </div>
+          <div class="col-12">
+            <div class="photo-control">
+              <div class="photo-info">
+                <label>Tarjeta de Operación </label>
+                <input type="text" id="form_6_foto_tarjeta_de_operacion" name="form_6_foto_tarjeta_de_operacion"
+                  value="/images/sin_imagen.png" readonly required />
+              </div>
+              <div class="photo-buttons">
+                <button class="button primary small btn-file-open" id="btn-form_6_foto_tarjeta_de_operacion"
+                  data-folder="tarjeta_de_operacion" input-id="form_6_foto_tarjeta_de_operacion"></button>
+                <button class="button primary small btn-camera-open" id="btn-form_6_foto_tarjeta_de_operacion"
+                  data-folder="tarjeta_de_operacion" input-id="form_6_foto_tarjeta_de_operacion"></button>
+                <button class="button primary small btn-camera-show"
+                  data-id="form_6_foto_tarjeta_de_operacion"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="col-12">
+      <hr class="hr-text" data-content="Opciones del formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input type="submit" value="Guardar Tarjeta de Operación " class="primary small fit" />
+    </div>
+    <div class="col-6 col-12-small">
+      <button type="reset" class="button primary small fit btn-limpiar-formulario">
+        CANCELAR
+      </button>
+    </div>
+  </div>
+</form>

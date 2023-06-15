@@ -1,0 +1,149 @@
+<section class="wrapper style4 container medium">
+    <div id="consulta-paso-1">
+        <div class="row gtr-25 gtr-uniform">
+            <div class="col-12 align-center">
+                <div class="container-title">
+                    En este módulo podrá conocer la información que reposa en PREVIAUTOS S.A.S
+                    sobre su vehículo o
+                    motocicleta
+                </div>
+            </div>
+            <div class="col-9 col-12-small">
+                <form id="form_consulta">
+                    <div class="row">
+                        <div class="col-12">
+                            <fieldset>
+                                <legend> Paso # 1</legend>
+                                <div class="row gtr-25 gtr-uniform">
+                                    <div class="col-3 col-12-small">
+                                        <label class="label-datos-alt"> Sede</label>
+                                    </div>
+                                    <div class="col-9 col-12-small">
+                                        <div class="input-container">
+                                            <i class="fas fa-map-marker-alt icon-input"></i>
+                                            <select id="form_0_servicio" name="sede" required="">
+                                                <option value="1" selected="">Bogotá DC </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset>
+                                <legend> Paso # 2 </legend>
+                                <div class="row gtr-25 gtr-uniform">
+                                    <div class="col-3 col-12-small">
+                                        <label class="label-datos-alt"> Placa</label>
+                                    </div>
+                                    <div class="col-9 col-12-small">
+                                        <div class="input-container">
+                                            <i class="fas fa-align-left icon-input"></i>
+                                            <input type="text" id="consulta_placa" placeholder="ABC123" name="placa"
+                                                maxlength="6" class="text-uppercase" value="" required=""
+                                                autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-12-small">
+                                        <label class="label-datos-alt"> Documento</label>
+                                    </div>
+                                    <div class="col-9 col-12-small">
+                                        <div class="input-container">
+                                            <i class="fas fa-align-left icon-input"></i>
+                                            <input type="text" id="consulta_documento" placeholder="00000000"
+                                                name="documento" maxlength="25" class="text-uppercase" value=""
+                                                required="" autocomplete="off">
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <hr>
+                                    </div>
+                                    <div class="col-3 col-12-small"></div>
+                                    <div class="col-9 col-12-small">
+                                        <button type="submit"
+                                            class="primary small fit icon solid fa-long-arrow-alt-right">
+                                            Consultar
+                                            información</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3 col-12-small">
+                <div class="container-sidebar">
+                    <div class="row gtr-25 gtr-uniform">
+
+                        <div class="col-12">
+                            <b class="icon solid fa-book-reader"> Servicios </b>
+                            <ul>
+                                <li>Revisión escáner y gases </li>
+                                <li>Peritajes y avalúos</li>
+                                <li>Toma de improntas </li>
+                                <li>Trámites de transito</li>
+                                <li><a href="https://www.previautos.com/servicios/"> Haz clic para conocer más</a> </li>
+                            </ul>
+                            <hr>
+                        </div>
+                        <div class="col-12 ">
+                            <b class="icon solid fa-cogs"> Equipamiento de primera </b>
+                            <p>
+                                Contamos con la maquinaria mas avanzada para diagnosticar tu vehiculo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 align-center">
+                <div class="container-title">
+                    PreviReport es un servicio de PREVIAUTOS S.A.S
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- delete this-->
+    <br><br>
+    <!-- delete this-->
+    <div id="consulta-paso-2" hidden>
+        <div class="row gtr-25 gtr-uniform">
+            <div class="col-12 align-right">
+                <button class="button primary small icon solid fa-long-arrow-alt-left" id="resultado_btn_top"> Realizar
+                    otra consulta </button>
+            </div>
+            <div class="col-12 align-center">
+                <div class="container-title">
+                    Señor usuario si la información suministrada no corresponde con sus datos reales por favor
+                    comuníquese con PREVIAUTOS S.A.S
+                </div>
+            </div>
+            <div class="col-12 align-center">
+                <i class="fas fa-folder-open fa-2x"></i>
+                <hr>
+            </div>
+            <div class="col-3 col-12-small">
+                <label class="label-datos-alt"> Placa</label>
+            </div>
+            <div class="col-3 col-12-small align-center">
+                <label class="label-resultados" id="resultado_placa"> ABC123 </label>
+            </div>
+            <div class="col-3 col-12-small">
+                <label class="label-datos-alt"> Documento</label>
+            </div>
+            <div class="col-3 col-12-small align-center">
+                <label class="label-resultados" id="resultado_documento"> 1110563467 </label>
+            </div>
+            <div class="col-12">
+                <fieldset>
+                    <legend>
+                        <i class="fas fa-folder-open"></i> Historial
+                    </legend>
+                    <div id="resultado_table"></div>
+                </fieldset>
+            </div>
+            <div class="col-12 align-right">
+                <button class="button primary small icon solid fa-long-arrow-alt-left" id="resultado_btn_bottom">
+                    Realizar
+                    otra consulta </button>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,136 @@
+<div class="row gtr-25 gtr-uniform">
+  <!-- inicio rollo de fotos -->
+  <div class="col-12">
+    <div class="row gtr-25 gtr-uniform">
+      <div class="col-1 col-12-mobilep"></div>
+      <div class="col-5 col-12-mobilep align-center">
+        <span class="image fit">
+          <a
+            href="/images/sin_imagen.png"
+            class="licencia-images-link"
+            id="form_12_href_licencia_delantera"
+          >
+            <img src="/images/sin_imagen.png" />
+          </a>
+        </span>
+        <label>Delantera</label>
+      </div>
+      <div class="col-5 col-12-mobilep align-center">
+        <span class="image fit">
+          <a
+            href="/images/sin_imagen.png"
+            id="form_12_href_licencia_trasera"
+            class="licencia-images-link"
+          >
+            <img src="/images/sin_imagen.png" />
+          </a>
+        </span>
+        <label>Trasera</label>
+      </div>
+      <div class="col-1 col-12-mobilep"></div>
+    </div>
+  </div>
+  <!-- fin rollo de fotos -->
+  <div class="col-12">
+    <form id="form_12_licencia_transito" name="form_12_licencia_transito">
+      <div class="row gtr-25 gtr-uniform">
+        <div class="col-12">
+          <fieldset>
+            <legend>
+              <i class="fas fa-plus"></i> Modificar licencia de transito
+            </legend>
+            <div class="row gtr-25 gtr-uniform">
+              <!-- foto chasis-->
+              <div class="col-6 col-12-small">
+                <div class="photo-control">
+                  <div class="photo-info">
+                    <label> Delantera </label>
+                    <input
+                      type="text"
+                      id="form_12_delantera"
+                      name="form_12_delantera"
+                      value="/images/sin_imagen.png"
+                      readonly
+                      required
+                    />
+                  </div>
+                  <div class="photo-buttons">
+                    <button
+                      class="button primary small btn-file-open"
+                      id="btn-form_12_delantera"
+                      data-folder="vehiculo/licencia_transito"
+                      input-id="form_12_delantera"
+                    ></button>
+                    <button
+                      class="button primary small btn-camera-open"
+                      id="btn-form_12_delantera"
+                      data-folder="vehiculo/licencia_transito"
+                      input-id="form_12_delantera"
+                    ></button>
+                    <button
+                      class="button primary small btn-camera-show"
+                      data-id="form_12_delantera"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+              <!-- foto serial-->
+              <div class="col-6 col-12-small">
+                <div class="photo-control">
+                  <div class="photo-info">
+                    <label> Trasera </label>
+                    <input
+                      type="text"
+                      id="form_12_trasera"
+                      name="form_12_trasera"
+                      value="/images/sin_imagen.png"
+                      readonly
+                      required
+                    />
+                  </div>
+                  <div class="photo-buttons">
+                    <button
+                      class="button primary small btn-file-open"
+                      id="btn-form_12_trasera"
+                      data-folder="vehiculo/licencia_transito"
+                      input-id="form_12_trasera"
+                    ></button>
+                    <button
+                      class="button primary small btn-camera-open"
+                      id="btn-form_12_trasera"
+                      data-folder="vehiculo/licencia_transito"
+                      input-id="form_12_trasera"
+                    ></button>
+                    <button
+                      class="button primary small btn-camera-show"
+                      data-id="form_12_trasera"
+                    ></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="col-12">
+          <hr class="hr-text" data-content="Opciones del formulario" />
+        </div>
+        <div class="col-6 col-12-small">
+          <input
+            type="submit"
+            value="Guardar Fotografias"
+            class="primary small fit"
+          />
+        </div>
+        <div class="col-6 col-12-small">
+          <button
+            type="reset"
+            class="button primary small fit btn-limpiar-formulario"
+          >
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- form fotos -->
+</div>

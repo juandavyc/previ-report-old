@@ -1,0 +1,83 @@
+<fieldset>
+  <legend><i class="far fa-folder-open"></i> Historial póliza SOAT</legend>
+  <div id="form_3_poliza_soat_resultados" class="accordion_form_resultados"></div>
+</fieldset>
+<form id="form_3_poliza_soat" name="form_3_poliza_soat">
+  <div class="row gtr-25 gtr-uniform">
+    <div class="col-12">
+      <fieldset>
+        <legend><i class="fas fa-plus"></i> Nueva póliza SOAT</legend>
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Aseguradora <b class="list-key"></b></label>
+          </div>
+          <div class="col-9 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-shield-alt icon-input"></i>
+              <input type="text" id="form_3_aseguradora_soat_input" value="" placeholder="Aseguradora"
+                class="text-uppercase" required="" />
+              <input type="hidden" name="form_3_aseguradora_soat" id="form_3_aseguradora_soat_select" value="1"
+                data-default="1" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Numero de póliza
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+              <input type="number" name="form_3_numero_soat" id="form_3_numero_soat" placeholder="0000"
+                autocomplete="off" value="" class="text-uppercase" required="" />
+            </div>
+          </div>
+          <div class="col-3 col-12-small">
+            <label class="label-important label-datos">
+              Fecha De Expedicion <b>(dd/mm/aaaa)</b>
+            </label>
+          </div>
+          <div class="col-3 col-12-small">
+            <div class="input-container">
+              <i class="fas fa-calendar icon-input"></i>
+              <input type="text" name="form_3_fecha_expedicion_soat" id="form_3_fecha_expedicion_soat"
+                class="input_date_listener" autocomplete="off" required="" />
+            </div>
+          </div>
+          <div class="col-12">
+            <label class="label-datos">
+              <i class="fas fa-images"></i> Foto <b>( opcional )</b></label>
+          </div>
+          <div class="col-12">
+            <div class="photo-control">
+              <div class="photo-info">
+                <label> Póliza SOAT</label>
+                <input type="text" id="form_3_foto_poliza_soat" name="form_3_foto_poliza_soat"
+                  value="/images/sin_imagen.png" readonly required />
+              </div>
+              <div class="photo-buttons">
+                <button class="button primary small btn-file-open" id="btn-form_3_foto_poliza_soat"
+                  data-folder="poliza_soat" input-id="form_3_foto_poliza_soat"></button>
+                <button class="button primary small btn-camera-open" id="btn-form_3_foto_poliza_soat"
+                  data-folder="poliza_soat" input-id="form_3_foto_poliza_soat"></button>
+                <button class="button primary small btn-camera-show" data-id="form_3_foto_poliza_soat"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-12">
+      <hr class="hr-text" data-content="Opciones del formulario" />
+    </div>
+    <div class="col-6 col-12-small">
+      <input type="submit" value="guardar póliza SOAT" class="primary small fit" />
+    </div>
+    <div class="col-6 col-12-small">
+      <button type="reset" class="button primary small fit btn-limpiar-formulario">
+        CANCELAR
+      </button>
+    </div>
+  </div>
+</form>

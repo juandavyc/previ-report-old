@@ -1,0 +1,71 @@
+<div id="camera-content" hidden>
+  <div class="container-camera">
+    <div class="row gtr-50 gtr-uniform">
+      <div class="col-12" id="camera-name"><label> My Camera V3 </label></div>
+      <div class="col-12 align-center" id="camera-message-top">
+        ESTE LADO ARRIBA
+      </div>
+      <div class="col-12 align-center" id="camera-canvas">
+        <input type="hidden" value="" id="camera_canvas_folder" />
+        <video id="camera_video" class="camera_video_off" style="">
+          Video stream not available.
+        </video>
+        <canvas id="camera_canvas"></canvas>
+      </div>
+      <div class="col-12" id="camera-control">
+        <div class="row gtr-25 gtr-uniform">
+          <div class="col-6 col-12-mobilep" style="padding-top: 8px">
+            <button
+              id="btn-camera-upload"
+              class="button primary small fit btn-camera"
+            >
+              Guardar
+            </button>
+          </div>
+          <div class="col-6 col-12-mobilep" style="padding-top: 8px">
+            <button
+              id="btn-camera-take"
+              class="button primary small fit btn-camera"
+            >
+              Tomar foto
+            </button>
+          </div>
+          <div class="col-6 col-12-mobilep" style="padding-top: 8px">
+            <button
+              id="btn-camera-reload"
+              class="button primary small fit btn-camera"
+            >
+              Corregir
+            </button>
+          </div>
+          <div class="col-6 col-12-mobilep" style="padding-top: 8px">
+            <button
+              id="btn-camera-exit"
+              class="button primary small fit btn-camera"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="filechooser-content" hidden>
+  <form id="form_save_file" enctype="multipart/form-data" method="POST">
+    <div class="row gtr-50 gtr-uniform">
+      <div class="col-12" id="dropzone-name" style="margin-top: 58px">
+        <label> My FileChooser V1 </label>
+      </div>
+      <div class="col-12 align-center" id="camera-message-top">
+        SELECCIONE O ARRASTRE EL ARCHIVO A SUBIR
+      </div>
+    </div>
+    <div id="container_filechooser">
+      <div class="dropzone-wrapper">
+        <input id="form_dropzone" type="file" name="file" />
+        <input id="form_folder" type="hidden" value="test" name="folder" />
+      </div>
+    </div>
+  </form>
+</div>

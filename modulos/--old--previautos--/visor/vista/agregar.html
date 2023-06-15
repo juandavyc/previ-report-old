@@ -1,0 +1,161 @@
+<div id="form_1_div">
+    <form id="form_1_buscar_placa" name="form_1_buscar_placa">
+        <div class="row gtr-50 gtr-uniform">
+            <div class="col-6 col-12-small"></div>
+            <div class="col-6 col-12-small">
+                <aside class="note-wrap note-yellow">
+                    Escriba la <b>PLACA</b> para crear o buscar el vehículo
+                    <br>
+                    P.D. Solo soporte técnico puede VEHÍCULOS
+                </aside>
+            </div>
+            <div class="col-12">
+                <hr class="hr-text-alt" data-content="Paso # 1">
+            </div>
+            <div class="col-12">
+                <fieldset>
+                    <legend><i class="fas fa-search"></i> Buscar por Placa</legend>
+                    <div class="row gtr-25 gtr-uniform">
+                        <div class="col-3 col-12-small">
+                            <label class="label-important label-datos"> Placa </label>
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <div class="input-container">
+                                <i class="fas fa-align-left icon-input"></i>
+                                <input type="text" id="form_1_placa" placeholder="" name="form_1_placa"
+                                    class="text-uppercase" maxlength="6" value="" required="" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div class="col-3 col-12-small">
+                            <input type="submit" value="BUSCAR PLACA" class="primary small fit" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </form>
+</div>
+<br />
+<div id="form_2_div" hidden>
+    <div class="col-12">
+        <hr class="hr-text-alt" data-content="Paso # 2">
+    </div>
+
+    <fieldset>
+        <legend><i class="fas fa-search"></i> Datos de consulta</legend>
+        <form id="form_2_datos">
+            <div class="row gtr-50 gtr-uniform">
+                <div class="col-12 align-center">
+                    <p>Con esta información, el cliente consultara sus revisiones, verifique que sea la
+                        correcta.
+                    </p>
+                </div>
+                <div class="col-2 col-12-small">
+                    <label class="label-important label-datos"> Placa </label>
+                </div>
+                <div class="col-2 col-12-small">
+                    <label class="label-resultados" id="form_2_placa"> </label>
+                </div>
+                <div class="col-2 col-12-small">
+                    <label class="label-important label-datos"> Documento </label>
+                </div>
+                <div class="col-3 col-12-small">
+                    <div class="input-container">
+                        <i class="fas fa-align-left icon-input"></i>
+                        <input type="text" id="form_2_documento" placeholder="Documento" name="form_2_documento"
+                            maxlength="25" value="" required="" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="col-3 col-12-small">
+                    <input type="submit" value="ACTUALIZAR" class="primary small fit" />
+                </div>
+
+            </div>
+        </form>
+    </fieldset>
+    <fieldset>
+        <legend><i class="fas fa-folder-open"></i> Historial de revisiones </legend>
+        <div id="form_2_historial" class="accordion_form_resultados">
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend><i class="fas fa-folder"></i> Cargar Revisiones </legend>
+        <form id="form_3_cargar_revision">
+            <div class="row gtr-50 gtr-uniform">
+                <div class="col-3 col-12-small">
+                    <label class="label-important label-datos"> Tipo de PDF </label>
+                </div>
+                <div class="col-3 col-12-small">
+                    <div class="input-container">
+                        <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+                        <select id="form_3_tipo" name="form_3_tipo" required="">
+                            <option value="1" selected="">Preventiva</option>
+                            <option value="2">Peritaje - Revisión técnica</option>
+                            <option value="3">Peritaje - Puesta a punto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3 col-12-small">
+                    <label class="label-important label-datos"> Numero (Bimensual)</label>
+                </div>
+                <div class="col-3 col-12-small">
+                    <div class="input-container">
+                        <i class="fas fa-sort-numeric-down-alt icon-input"></i>
+                        <select id="form_3_numero" name="form_3_numero" required="">
+                            <option value="No aplica" selected="">No aplica</option>
+                            <option value="1">1 </option>
+                            <option value="2">2 </option>
+                            <option value="3">3 </option>
+                            <option value="4">4 </option>
+                            <option value="5">5 </option>
+                            <option value="6">6 </option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-3 col-12-small">
+                    <label class="label-important label-datos">
+                        Fecha De Expedicion <b>(dd/mm/aaaa)</b>
+                    </label>
+                </div>
+                <div class="col-3 col-12-small">
+                    <div class="input-container">
+                        <i class="fas fa-calendar icon-input"></i>
+                        <input type="text" name="form_3_fecha_expedicion" id="form_3_fecha_expedicion"
+                            class="input_date_listener" autocomplete="off" value="01/01/2021" required="">
+                    </div>
+                </div>
+                <div class="col-3 col-12-small">
+                    <label class="label-important label-datos">
+                        Fecha De Vencimiento <b>(dd/mm/aaaa)</b>
+                    </label>
+                </div>
+                <div class="col-3 col-12-small">
+                    <div class="input-container">
+                        <i class="fas fa-calendar icon-input"></i>
+                        <input type="text" name="form_3_fecha_vencimiento" id="form_3_fecha_vencimiento"
+                            class="input_date_listener" autocomplete="off" value="01/01/2999" required="">
+                    </div>
+                </div>
+                <div class="col-3 col-12-small">
+                    <label class="label-important label-datos">
+                        Archivo PDF
+                    </label>
+                </div>
+                <div class="col-9 col-12-small">
+                    <input type="file" id="form_3_archivo" name="form_3_archivo" accept="application/pdf" required>
+                </div>
+                <div class="col-12">
+                    <hr class="hr-text" data-content="Opciones del formulario" />
+                </div>
+                <div class="col-6 col-12-small">
+                    <input type="submit" value="Guardar " class="primary small fit" />
+                </div>
+                <div class="col-6 col-12-small">
+                    <button id="btn-reset-all" class="button primary small fit btn-limpiar-formulario">
+                        SALIR
+                    </button>
+                </div>
+            </div>
+        </form>
+    </fieldset>
+</div>
