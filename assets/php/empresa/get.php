@@ -19,21 +19,6 @@ class ReadEmpresas
         )
     ) {
 
-        // Ejemplo: Llama por NIT
-        // $arrayResponse = $empresa->getEmpresaInformacion(
-        //    array(
-        //        'TYPE' => 'NIT',
-        //        'VALUE' => '000-1',
-        //    )
-        // );
-        // Ejemplo: LLama por ID
-        // $arrayResponse = $empresa->getEmpresaInformacion(
-        //    array(
-        //        'TYPE' => 'ID',
-        //        'VALUE' => 1,
-        //    )
-        // );
-
         $arrayCondicional = array(
             'ID' => 'empr.id_empresa',
             'NIT' => 'empr.nit',
@@ -45,7 +30,7 @@ class ReadEmpresas
 
         $mysqlQuery = "SELECT ";
         #tabla empresa
-        $mysqlQuery .= "id_empresa,nombre_empresa ";
+        $mysqlQuery .= "id_empresa,nombre_empresa,nit ";
         ## FROM ##
         $mysqlQuery .= "FROM ";
         $mysqlQuery .= "empresa ";
@@ -61,8 +46,9 @@ class ReadEmpresas
                 while ($row = $mysqlResult->fetch_assoc()) {
                     array_push($mysqlArrayEmpresa,
                         array(
-                            "id" => htmlspecialchars($row['id_empresa']),
+                            "id" => ($row['id_empresa']),
                             "nombre" => htmlspecialchars($row['nombre_empresa']),
+                            "nit" => htmlspecialchars($row['nit']),
                         )
                     );
                 }

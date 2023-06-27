@@ -19,82 +19,10 @@
                 <a href="#">Documentos</a>
                 <ul>
                     <li class="submenu">
-                        <a href="#" class="icon solid fa-solid fa-chevron-right"> Conductores</a>
-                        <ul>
-                            <li>
-                                <a href="/modulos/conductores/visor/">(ARL) Riesgos Laborales</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Capacitaciones</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Multas y/o sanciones</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Contactos de emergencia</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Contratos</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Cursos</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">(EPS) Promotoras de Salud</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Examenes Ocupacionales</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Fondo de pensión</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Incapacidades</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Licencia de conduccion</a>
-                            </li>
-                        </ul>
+                        <a href="/modulos/documentos/conductores/">Conductores</a>
                     </li>
                     <li class="submenu">
-                        <a href="#" class="icon solid fa-solid fa-chevron-right"> Vehículos</a>
-                        <ul>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Certificados</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Fotografías</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Improntas</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Pólizas</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Revisiones Preventivas</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">(RTM) Técnico mecánica</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">(SOAT) Seguro Obligatorio</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Solicitudes</a>
-                            </li>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Tarjeta de Operación</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="submenu">
-                        <a href="#" class="icon solid fa-solid fa-chevron-right"> Empresa</a>
-                        <ul>
-                            <li>
-                                <a href="/modulos/conductores/visor/">Certificaciones</a>
-                            </li>
-                        </ul>
+                        <a href="/modulos/documentos/conductores/">Vehículos</a>
                     </li>
                 </ul>
             </li>

@@ -10,15 +10,10 @@ require $_SERVER["DOCUMENT_ROOT"] . '/assets/php/hoja_public_config.php'; ?>
     <meta name="keywords" content="improntas, regrabaciones, logistica, administrar, fontibon, livianos, automoviles, pesados, motos, automoviles, tractocamiones, gestionar, flota, vehículos, conductores, hoja de vida vehicular, preoperacionales, mantenimientos, siniestros, preventivas, previautos, previautos sas, bogotá, colombia">
     <meta name="author" content="Previautos S.A.S">
     <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?>">
-    <link rel="shortcut icon" type="image/jpg" href="../images/favicon.png" />
-    <link rel="stylesheet" href="../assets/css/main.css" /> <noscript>
-        <link rel="stylesheet" href="../assets/css/noscript.css" />
+    <link rel="shortcut icon" type="image/jpg" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/assets/css/main.css" /> <noscript>
+        <link rel="stylesheet" href="/assets/css/noscript.css" />
     </noscript>
-    <style>
-        body {
-            /*background: #535353;*/
-        }
-    </style>
 </head>
 
 <body data-id="inicio" class="is-preload landing">
