@@ -54,7 +54,7 @@
                         <label class="align-center">¿Obtener resultados para?</label>
                         <div class="row gtr-25 gtr-uniform">
                             <div class="col-4 col-12-small">
-                                <input type="checkbox" id="documento-arl" name="documento[]" value="arl">
+                                <input type="checkbox" id="documento-arl" name="documento[]" value="arl" checked>
                                 <label for="documento-arl">ARL</label>
                             </div>
                             <div class="col-4 col-12-small">

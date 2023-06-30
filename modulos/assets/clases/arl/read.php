@@ -75,7 +75,7 @@ class ReadArl
 
         return $this->arrayResponse;
     }
-    public function getArlDocumentos(
+    public function getDocumentos(
         $_empresa = '%%',
         $_filtro = '%%',
         $_contenido = '%%'
@@ -86,18 +86,31 @@ class ReadArl
         );
         $mysqlArray = array();
 
-        $mysqlQuery = "SELECT ";
-        $mysqlQuery .= "arlc.id_arl_conductor, arll.nombre_arl,arlc.fecha_afiliacion_arl,earl.nombre_estado_arl, ";
-        $mysqlQuery .= "cond.numero_documento,cond.nombre_conductor,cond.apellido_conductor, arlc.fecha_formulario ";
-        $mysqlQuery .= "FROM arl_conductor arlc ";
-        $mysqlQuery .= "LEFT JOIN arl arll ON arll.id_arl = arlc.id_arl ";
-        $mysqlQuery .= "LEFT JOIN conductor cond ON arlc.id_conductor = cond.id_conductor ";
-        $mysqlQuery .= "LEFT JOIN estado_arl earl ON earl.id_estado_arl = arlc.id_estado_arl ";
-        $mysqlQuery .= "WHERE ";
-        $mysqlQuery .= "arlc.is_visible = 1  ";
-        $mysqlQuery .= "AND arlc.is_visible = 1  ";
-        $mysqlQuery .= "ORDER BY arlc.id_arl_conductor DESC ";
+        $mysqlQuery = '
+        SELECT 
+            arlc.id_arl_conductor,
+            arll.nombre_arl,
+            arlc.fecha_afiliacion_arl,
+            earl.nombre_estado_arl,
+            cond.numero_documento,
+            cond.nombre_conductor,
+            cond.apellido_conductor,
+            empr.nombre_empresa
+        FROM
+            arl_conductor arlc
+                LEFT JOIN
+            arl arll ON arll.id_arl = arlc.id_arl
+                LEFT JOIN
+            conductor cond ON arlc.id_conductor = cond.id_conductor
+                LEFT JOIN
+            estado_arl earl ON earl.id_estado_arl = arlc.id_estado_arl
+                LEFT JOIN
+            empresa empr ON cond.id_empresa = empr.id_empresa
+        WHERE
+            arlc.is_visible = 1
+        ORDER BY arlc.id_arl_conductor DESC';
 
+       
         $mysqlStmt = mysqli_prepare($this->databaseConnection, $mysqlQuery);
         //$mysqlStmt->bind_param('s', $_condicional_['VALUE']);
         if ($mysqlStmt->execute()) {
@@ -108,32 +121,32 @@ class ReadArl
                         array_push(
                             $mysqlArray,
                             array(
-                                "arl" => htmlspecialchars($row['nombre_arl']),
-                                "fecha_afiliacion" => htmlspecialchars($row['fecha_afiliacion_arl']),
-                                "documento" => htmlspecialchars($row['numero_documento']),
-                                "nombre" => htmlspecialchars($row['nombre_conductor']),
-                                "apellido" => htmlspecialchars($row['apellido_conductor']),
-                                "estado" => htmlspecialchars($row['nombre_estado_arl']),
-                                "fecha" => htmlspecialchars($row['fecha_formulario']),
-                                "opciones" => htmlspecialchars($row['id_arl_conductor']),
+                                htmlspecialchars($row['nombre_arl']),
+                                setSpecialDate($row['fecha_afiliacion_arl']),
+                                htmlspecialchars($row['numero_documento']),
+                                htmlspecialchars($row['nombre_conductor']),
+                                htmlspecialchars($row['apellido_conductor']),
+                                htmlspecialchars($row['nombre_estado_arl']),
+                                htmlspecialchars($row['nombre_empresa']),
+                                htmlspecialchars($row['id_arl_conductor']),
                             )
                         );
                     }
 
                     $this->arrayResponse = array(
                         'status' => 'bien',
-                        'message' => 'Resultados encontrados',
+                        'message' => 'Arl',
                         'results' => $mysqlArray,
                         'head' => array(
-                            "num",
-                            "arl",
-                            "fecha_afiliacion",
-                            "documento",
-                            "nombre",
-                            "apellido",
-                            "estado",
-                            "fecha",
-                            "opciones",
+                            "Nro",
+                            "Arl",
+                            "Fecha Afiliacion",
+                            "Documento",
+                            "Nombre",
+                            "Apellido",
+                            "Estado",
+                            "Empresa",
+                            "Opciones",
                         )
                     );
                 } else {

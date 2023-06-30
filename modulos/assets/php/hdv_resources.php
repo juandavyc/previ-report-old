@@ -103,6 +103,11 @@ function getspecialdate($_fecha)
 {
     return date('Y-m-d', strtotime(str_replace('/', '-', $_fecha)));
 }
+
+function setSpecialDate($_fecha)
+{
+    return date('d/m/Y', strtotime(str_replace('-', '/', $_fecha)));
+}
 function getSpecialDateTime($_fecha)
 {
     return date('d/m/Y H:i:s', strtotime(str_replace('-', '/', $_fecha)));

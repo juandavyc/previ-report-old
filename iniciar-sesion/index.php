@@ -26,6 +26,10 @@ require $_SERVER["DOCUMENT_ROOT"] . '/assets/php/hoja_public_config.php'; ?>
             border-radius: .25rem;
         }
 
+        .card:hover {
+            background: #dfdfdf;
+        }
+
         .card-body {
             -ms-flex: 1 1 auto;
             flex: 1 1 auto;
@@ -42,8 +46,6 @@ require $_SERVER["DOCUMENT_ROOT"] . '/assets/php/hoja_public_config.php'; ?>
         .card-text {
             margin: 1em 0;
         }
-
-
     </style>
 </head>
 
@@ -59,23 +61,21 @@ require $_SERVER["DOCUMENT_ROOT"] . '/assets/php/hoja_public_config.php'; ?>
                 <div class="content">
                     <div class="row gtr-25 gtr-uniform" id="container-empresas">
                         <div class="col-12 align-center">
-                        <span class="icon solid fa-briefcase fa-3x"></span>
+                            <span class="icon solid fa-briefcase fa-3x"></span>
                             <h3>
-                                <b>                                  
-                                    Seleccione su empresa
-                                </b>
+                                <b> Seleccione su empresa </b>
                             </h3>
                         </div>
-                        <div class="col-12" id="container-empresas-items">                           
+                        <div class="col-12" id="container-empresas-items">
                         </div>
                     </div>
                     <div class="row gtr-25 gtr-uniform" id="container-iniciar-sesion" style="display: none;">
                         <form id="form_iniciar_sesion">
                             <div class="row gtr-25 gtr-uniform">
                                 <div class="col-12">
-                                <a href="#" id="iniciar-empresa-volver" class="icon solid fa-arrow-left"> Seleccionar empresa </a>
+                                    <a href="#" id="iniciar-empresa-volver" class="icon solid fa-arrow-left"> Seleccionar empresa </a>
                                 </div>
-                                <div class="col-12 align-center">                                    
+                                <div class="col-12 align-center">
                                     <h3>Empresa: <b id="iniciar-empresa-nombre"></b></h3>
                                     <input type="hidden" id="iniciar-empresa" name="empresa" readonly autocomplete="off">
                                 </div>
@@ -106,7 +106,8 @@ require $_SERVER["DOCUMENT_ROOT"] . '/assets/php/hoja_public_config.php'; ?>
                 </div>
             </section>
         </article> <?php require DOCUMENT_ROOT . '/hoja_footer.php'; ?>
-    </div> <!-- Scripts -->
+    </div> 
+    <!-- Scripts -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/js/jquery.dropotron.min.js"></script>
     <script src="../assets/js/jquery.scrolly.min.js"></script>

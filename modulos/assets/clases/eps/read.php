@@ -75,4 +75,89 @@ class ReadEps
 
         return $this->arrayResponse;
     }
+
+    public function getDocumentos(
+        $_empresa = '%%',
+        $_filtro = '%%',
+        $_contenido = '%%'
+    ) {
+        // $arrayCondicional = array(
+        //     'ID' => 'arl.id_arl',
+        //     'ID_CONDUCTOR' => 'arlc.id_conductor',
+        // );
+        $mysqlArray = array();
+
+        $mysqlQuery = '
+        SELECT 
+            epsc.id_eps_conductor,
+            eps.nombre_eps,
+            cond.numero_documento,
+            cond.nombre_conductor,
+            cond.apellido_conductor,
+            empr.nombre_empresa,
+            epsc.fecha_afiliacion_eps
+        FROM
+            eps_conductor epsc
+                LEFT JOIN
+            eps ON eps.id_eps = epsc.id_eps
+                LEFT JOIN
+            conductor cond ON epsc.id_conductor = cond.id_conductor
+                LEFT JOIN
+            empresa empr ON cond.id_empresa = empr.id_empresa
+        WHERE
+            epsc.is_visible = 1
+        ORDER BY epsc.id_eps_conductor DESC;';
+            
+        $mysqlStmt = mysqli_prepare($this->databaseConnection, $mysqlQuery);
+        //$mysqlStmt->bind_param('s', $_condicional_['VALUE']);
+        if ($mysqlStmt->execute()) {
+            if ($mysqlStmt->execute()) {
+                $mysqlResult = $mysqlStmt->get_result();
+                if (intval($mysqlResult->num_rows) > 0) {
+                    while ($row = $mysqlResult->fetch_assoc()) {
+                        array_push(
+                            $mysqlArray,
+                            array(
+                                htmlspecialchars($row['nombre_eps']),
+                                setSpecialDate($row['fecha_afiliacion_eps']),
+                                htmlspecialchars($row['numero_documento']),
+                                htmlspecialchars($row['nombre_conductor']),
+                                htmlspecialchars($row['apellido_conductor']),
+                                htmlspecialchars($row['nombre_empresa']),
+                                htmlspecialchars($row['id_eps_conductor']),
+                            )
+                        );
+                    }
+
+                    $this->arrayResponse = array(
+                        'status' => 'bien',
+                        'message' => 'EPS',
+                        'results' => $mysqlArray,
+                        'head' => array(
+                            "Nro",
+                            "EPS",
+                            "Fecha Afiliacion",
+                            "Conduc. Documento",
+                            "Conduc. Nombre",
+                            "Conduc. Apellido", 
+                            "Empresa",
+                            "Opciones",
+                        )
+                    );
+                } else {
+                    $this->arrayResponse = array(
+                        'status' => 'sin_resultados',
+                        'message' => 'La búsqueda no arrojo ningún resultado, por favor inténtelo de nuevo o más tarde',
+                    );
+                }
+            }
+        } else {
+            $this->arrayResponse = array(
+                'status' => 'error',
+                'message' => 'Error en la consulta: ' . htmlspecialchars($mysqlStmt->error),
+            );
+        }
+
+        return $this->arrayResponse;
+    }
 }

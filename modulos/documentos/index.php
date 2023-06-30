@@ -15,9 +15,7 @@ required_session();
     <noscript>
         <link rel="stylesheet" href="/assets/css/noscript.css" />
     </noscript>
-    <style>
-
-    </style>
+    
 </head>
 
 <body data-id="documentos" class="is-preload landing">

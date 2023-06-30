@@ -2,7 +2,7 @@
 <hr>
 <ol style="margin-left:1em;">
     <li>
-        <a href="#">(ARL) Riesgos Laborales.</a>
+        <a href="#container-arl">(ARL) Riesgos Laborales.</a>
     </li>
     <li>
         <a href="#">Capacitaciones.</a>

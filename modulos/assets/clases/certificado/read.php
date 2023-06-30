@@ -2,12 +2,13 @@
 class CertificadoVehiculo
 {
 
-    public $array_certificado_vehiculo = array();
-    public $contador_certificado_vehiculo = 0;
+    private $databaseConnection = null;
+    private $arrayResponse = array();
+    private $arrayContador = 0;
 
     public function __construct($_database)
     {
-        $this->conn = $_database;
+        $this->databaseConnection = $_database;
     }
     public function getCertificadoVehiculo($id_vehiculo)
     {
@@ -23,7 +24,7 @@ class CertificadoVehiculo
 
         $mysql_query .= "WHERE veh.id_vehiculo = ? ORDER BY cer.id_certificado DESC LIMIT 0,5";
 
-        $mysql_stmt = mysqli_prepare($this->conn, $mysql_query);
+        $mysql_stmt = mysqli_prepare($this->databaseConnection, $mysql_query);
 
         $mysql_stmt->bind_param('i', $id_vehiculo);
 
@@ -31,7 +32,7 @@ class CertificadoVehiculo
             $result = $mysql_stmt->get_result();
 
             while ($row = $result->fetch_assoc()) {
-                array_push($this->array_certificado_vehiculo, array(
+                array_push($this->arrayResponse, array(
 
                     'tipo_certificado' => $row['nombre_tipo_certificado'],
                     'ente_otorga' => $row['nombre_entidad_certificado'],
@@ -42,7 +43,7 @@ class CertificadoVehiculo
             }
 
         }
-        return $this->array_certificado_vehiculo;
+        return $this->arrayResponse;
     }
 
 }

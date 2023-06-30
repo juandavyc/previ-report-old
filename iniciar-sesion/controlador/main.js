@@ -67,7 +67,7 @@ const iniciarSesion = () => {
               self.close();
             }, 1000);
           } else {
-            self.setTitle(response.statusText);
+            self.setTitle(response.status);
             self.setContent(response.message);
           }
         })
@@ -82,8 +82,6 @@ const iniciarSesion = () => {
     },
   });
 }
-
-
 
 const innerEmpresas = (_empresas) => {
   const rowElement = document.createElement('div');
@@ -123,6 +121,7 @@ const innerEmpresas = (_empresas) => {
       empresaNombre.textContent = e.target.getAttribute('data-name');
       containerEmpresas.style.display = 'none';
       containerIniciarSesion.style.display = 'block';
+      containerIniciarSesion.scrollIntoView({ behavior: "smooth" });
       e.preventDefault();
     });
   });
@@ -132,14 +131,9 @@ const innerEmpresas = (_empresas) => {
 
 btnContainerEmpresas.addEventListener('click', (e) => {
   e.preventDefault();
-  containerEmpresas.style.display = 'block';
   containerIniciarSesion.style.display = 'none';
-});
-
-btnContainerEmpresas.addEventListener('click', (e) => {
-  e.preventDefault();
   containerEmpresas.style.display = 'block';
-  containerIniciarSesion.style.display = 'none';
+  containerEmpresas.scrollIntoView({ behavior: "smooth" });
 });
 
 formulario.addEventListener('submit', (e) => {

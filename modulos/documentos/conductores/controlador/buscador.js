@@ -75,7 +75,18 @@ export const buscadorSubmit = () => {
                 timeout: 35000,
             }).done(function (response) {
                 if (response.status === 'bien') {
+
                     elementosContainer('arl', response.documents.arl);
+                    elementosContainer('contacto', response.documents.contactos);
+                    elementosContainer('eps', response.documents.eps);
+                    elementosContainer('incapacidad', response.documents.incapacidad);
+                    elementosContainer('capacitacion', response.documents.capacitacion);
+                    elementosContainer('contrato', response.documents.contrato);
+                    elementosContainer('examen', response.documents.examen);
+                    elementosContainer('licencia', response.documents.licencia);
+                    elementosContainer('comparendo', response.documents.comparendo);
+
+                    
                 } else {
                     self.setTitle(response.status);
                     self.setContent(response.message);
@@ -93,26 +104,44 @@ export const buscadorSubmit = () => {
 }
 
 const elementosContainer = (id, response) => {
-    let inner = '<table>';
+
+
     if (response.status === "bien") {
+
+        let inner = '<h3>- <b>' + (response.message) + '</b></h3>';
+        let total = 0;
+        inner += '<table class="alt">';
         inner += '<thead><tr>';
         Object.entries(response.head).forEach(([key, value]) => {
-            inner += '<th>' + value.replaceAll("_", " ") + '</th>';
+            inner += '<th>';
+            inner += value.replaceAll("_", " ");
+            inner += '</th>';
         });
         inner += '</tr></thead>';
         inner += '<tbody>';
         Object.entries(response.results).forEach(([key, value]) => {
             inner += '<tr>';
-            inner += '<td>' + (parseInt(key) + 1) + '</td>';
+            inner += '<td data-label="nro">' + (parseInt(key) + 1) + '</td>';
+            total = (Object.keys(value).length) - 1;
             Object.entries(value).forEach(([subkey, subvalue]) => {
-                inner += '<td>' + subvalue + '</td>';
+                inner += '<td data-label="' + (response.head[parseInt(subkey) + 1]) + '">'
+                if (total == subkey) {
+                    inner += '<button class="button primary small icon solid fas fa-info-circle"></button>';
+                }
+                else {
+                    inner += subvalue;
+                }
+                inner += '</td>';
+
             });
             inner += '</tr>';
         });
         inner += '</tbody>';
+        inner += '</table>';
+        $('#container-' + id).empty().html(inner);
+
     }
-    inner += '</table>';
-    $('#container-' + id).empty().html(inner);
+
 }
 
 

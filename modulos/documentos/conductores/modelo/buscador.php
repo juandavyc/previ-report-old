@@ -20,9 +20,7 @@ if (
 
     $json_status = "error";
     $json_message = "sin iniciar";
-    $json_documents = array(
-        'arl'=>array()
-    );
+    $json_documents = array();
 
 
     if (
@@ -31,9 +29,20 @@ if (
     ) {
 
         require DOCUMENT_ROOT . '/modulos/assets/clases/arl/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/contacto_emergencia/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/eps/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/incapacidad_conductor/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/capacitacion_conductor/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/contrato/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/examen_conductor/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/licencia/read.php';
+        require DOCUMENT_ROOT . '/modulos/assets/clases/comparendo_conductor/read.php';
+
+
+
         include DOCUMENT_ROOT . '/modulos/assets/php/hdv_database.php';
         include DOCUMENT_ROOT . '/modulos/assets/php/hdv_resources.php';
-         // $_documentos = $_POST['documento'];
+        // $_documentos = $_POST['documento'];
         // foreach($_documentos as $key => $value){
         //     echo $key." - ".$value;
         // }
@@ -43,8 +52,36 @@ if (
 
         if (strcmp($database->status(), "bien") == 0) {
             $json_status = "bien";
+
             $arl = new ReadArl($database->myconn);
-            $json_documents['arl'] = $arl->getArlDocumentos();
+            $json_documents['arl'] = $arl->getDocumentos();
+
+            $contacto = new ReadContactoEmergencia($database->myconn);
+            $json_documents['contactos'] = $contacto->getDocumentos();
+
+            $eps = new ReadEps($database->myconn);
+            $json_documents['eps'] = $eps->getDocumentos();
+
+            $incapacidad = new IncapacidadConductor($database->myconn);
+            $json_documents['incapacidad'] = $incapacidad->getDocumentos();
+
+            $capacitacion = new CapacitacionConductor($database->myconn);
+            $json_documents['capacitacion'] = $capacitacion->getDocumentos();
+
+            $contrato = new ContratoConductor($database->myconn);
+            $json_documents['contrato'] = $contrato->getDocumentos();
+
+            $examen = new ExamenConductor($database->myconn);
+            $json_documents['examen'] = $examen->getDocumentos();
+
+            $licencia = new LicenciaConductor($database->myconn);
+            $json_documents['licencia'] = $licencia->getDocumentos();
+
+            $comaprendo = new ComparendoConductor($database->myconn);
+            $json_documents['comparendo'] = $comaprendo->getDocumentos();
+
+
+
         } else {
             $json_status = "error";
             $json_message = "Imposible conectar a la base de datos";

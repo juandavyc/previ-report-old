@@ -1,5 +1,5 @@
 <?php
-class ComparendoConductor
+class LicenciaConductor
 {
 
     private $databaseConnection = null;
@@ -10,39 +10,6 @@ class ComparendoConductor
     {
         $this->databaseConnection = $_database;
     }
-    public function getComparendoConductor($id_conductor)
-    {
-        $mysqlArray = array();
-
-        $mysql_query = "SELECT ";
-        $mysql_query .= "comco.fecha_comparendo_conductor, ticomco.nombre_tipo_comparendo_conductor,  comco.motivo_comparendo_conductor ";
-        $mysql_query .= "FROM comparendo_conductor comco ";
-        $mysql_query .= "LEFT JOIN tipo_comparendo_conductor ticomco ON comco.id_tipo_comparendo_conductor = ticomco.id_tipo_comparendo_conductor ";
-        $mysql_query .= "LEFT JOIN conductor con ON comco.id_conductor = con.id_conductor ";
-        #Condicion
-        $mysql_query .= "WHERE con.id_conductor = ? ORDER BY con.id_conductor DESC ";
-        $mysql_stmt = mysqli_prepare($this->databaseConnection, $mysql_query);
-
-        $mysql_stmt->bind_param('i', $id_conductor);
-
-        if ($mysql_stmt->execute()) {
-            $result = $mysql_stmt->get_result();
-
-            while ($row = $result->fetch_assoc()) {
-                array_push(
-                    $mysqlArray,
-                    array(
-                        'tipo' => $row['nombre_tipo_comparendo_conductor'],
-                        'fecha' => $row['fecha_comparendo_conductor'],
-                        'motivo' => $row['motivo_comparendo_conductor'],
-
-                    )
-                );
-            }
-        }
-        return $mysqlArray;
-    }
-
 
     public function getDocumentos(
         $_empresa = '%%',
@@ -57,25 +24,36 @@ class ComparendoConductor
 
         $mysqlQuery = '
         SELECT 
-            comc.id_comparendo_conductor,
-            tipc.nombre_tipo_comparendo_conductor,
-            comc.fecha_comparendo_conductor,    
+            licc.id_licencia_conduccion,
+            licc.numero_licencia_conduccion,
+            licc.fecha_expedicion_licencia_conduccion,
+            licc.fecha_vencimiento_licencia_conduccion,
+            cat1.nombre_categoria_licencia_conduccion AS licencia_1,
+            cat2.nombre_categoria_licencia_conduccion AS licencia_2,
+            cat3.nombre_categoria_licencia_conduccion AS licencia_3,
+            cat4.nombre_categoria_licencia_conduccion AS licencia_4,
             cond.numero_documento,
             cond.nombre_conductor,
             cond.apellido_conductor,
             empr.nombre_empresa
         FROM
-            comparendo_conductor comc
+            licencia_conduccion licc
                 LEFT JOIN
-            tipo_comparendo_conductor tipc ON tipc.id_tipo_comparendo_conductor = comc.id_tipo_comparendo_conductor
+            categoria_licencia_conduccion cat1 ON cat1.id_categoria_licencia_conduccion = licc.id_categoria_1
                 LEFT JOIN
-            conductor cond ON comc.id_conductor = cond.id_conductor
+            categoria_licencia_conduccion cat2 ON cat2.id_categoria_licencia_conduccion = licc.id_categoria_2
+                LEFT JOIN
+            categoria_licencia_conduccion cat3 ON cat3.id_categoria_licencia_conduccion = licc.id_categoria_3
+                LEFT JOIN
+            categoria_licencia_conduccion cat4 ON cat4.id_categoria_licencia_conduccion = licc.id_categoria_4
+                LEFT JOIN
+            conductor cond ON licc.id_conductor = cond.id_conductor
                 LEFT JOIN
             empresa empr ON cond.id_empresa = empr.id_empresa
         WHERE
-            comc.is_visible = 1
-        ORDER BY comc.id_comparendo_conductor DESC;';
-            
+            licc.is_visible = 1
+        ORDER BY licc.id_licencia_conduccion DESC;';
+
         $mysqlStmt = mysqli_prepare($this->databaseConnection, $mysqlQuery);
         //$mysqlStmt->bind_param('s', $_condicional_['VALUE']);
         if ($mysqlStmt->execute()) {
@@ -86,28 +64,38 @@ class ComparendoConductor
                         array_push(
                             $mysqlArray,
                             array(
-                                htmlspecialchars($row['nombre_tipo_comparendo_conductor']),
-                                setSpecialDate($row['fecha_comparendo_conductor']),
+                                htmlspecialchars($row['numero_licencia_conduccion']),
+                                setSpecialDate($row['fecha_expedicion_licencia_conduccion']),
+                                setSpecialDate($row['fecha_vencimiento_licencia_conduccion']),
+                                htmlspecialchars($row['licencia_1'] == "SIN CATEGORIA" ? '-' : $row['licencia_1']),
+                                htmlspecialchars($row['licencia_2'] == "SIN CATEGORIA" ? '-' : $row['licencia_2']),
+                                htmlspecialchars($row['licencia_3'] == "SIN CATEGORIA" ? '-' : $row['licencia_3']),
+                                htmlspecialchars($row['licencia_4'] == "SIN CATEGORIA" ? '-' : $row['licencia_4']),
                                 htmlspecialchars($row['numero_documento']),
                                 htmlspecialchars($row['nombre_conductor']),
                                 htmlspecialchars($row['apellido_conductor']),
                                 htmlspecialchars($row['nombre_empresa']),
-                                htmlspecialchars($row['id_comparendo_conductor']),
+                                htmlspecialchars($row['id_licencia_conduccion']),
                             )
                         );
                     }
 
                     $this->arrayResponse = array(
                         'status' => 'bien',
-                        'message' => 'comparendo',
+                        'message' => 'Licencia',
                         'results' => $mysqlArray,
                         'head' => array(
                             "Nro",
-                            "Tipo",
-                            "Fecha",
+                            "Numero",
+                            "Fecha Expedición",
+                            "Fecha Vencimiento",
+                            "CAT 1",
+                            "CAT 2",
+                            "CAT 3",
+                            "CAT 4",
                             "Conduc. Documento",
                             "Conduc. Nombre",
-                            "Conduc. Apellido", 
+                            "Conduc. Apellido",
                             "Empresa",
                             "Opciones",
                         )
@@ -128,7 +116,4 @@ class ComparendoConductor
 
         return $this->arrayResponse;
     }
-
-
-
 }

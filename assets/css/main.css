@@ -2320,8 +2320,9 @@ table th:first-child {
   border-left: 1px solid #ccc;
 }
 
-table th:last-child {
-  width: 300px;
+table.alt th:last-child {
+  max-width: 300px;
+  min-width: 180px;
 }
 
 table tfoot {
